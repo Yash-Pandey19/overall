@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class freyathefrog {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -17,8 +16,9 @@ public class freyathefrog {
             long xMoves = (x + k - 1) / k;  // Equivalent to Math.ceil((double)x / k)
             long yMoves = (y + k - 1) / k;  // Equivalent to Math.ceil((double)y / k)
 
-            // Total moves needed is the sum of xMoves and yMoves
-            long totalMoves = xMoves + yMoves;
+            // Total moves required
+            long totalMoves = Math.max(xMoves, yMoves) * 2;
+            if ((totalMoves / 2) > xMoves) totalMoves--; // Adjust in case Freya overshoots x
 
             // Output the result
             System.out.println(totalMoves);
