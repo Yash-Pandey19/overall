@@ -12,3 +12,4 @@ public class TheatreSquare {
         System.out.println(total);
     }
 }
+
